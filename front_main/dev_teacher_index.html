@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Codebase | Школа программирования</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+          crossorigin="anonymous">
+
+<style>
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+.imageLogo {
+  width: 200px;
+  height: inherit;
+}
+
+.centerContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  line-height: 100px;
+  padding: 31px 98px;
+  box-sizing: border-box;
+}
+
+.registrationButton {
+  background-color: #0049ff;
+  color: white;
+  border-radius: 50px;
+  padding: 5px 40px;
+  font-size: 25px;
+}
+
+.content h1 {
+  margin-top: 100px ;
+  text-align: center;
+}
+
+.title {
+  font-size: 25px;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.registration h1 {
+  text-align: center;
+}
+
+.description {
+  color: #ff7900;
+}
+
+.box {
+  border: 1px solid black;
+  padding: 60px;
+  margin: 40px 0;
+}
+.orange {
+  background-color: #ff7900;
+}
+
+.orange:hover {
+  background-color: #0049ff;
+}
+
+.forgetMessage:hover {
+  color: #0049ff;
+}
+
+label.filebutton {
+  width:120px;
+  height:40px;
+  overflow:hidden;
+  position:relative;
+  background-color:#ccc;
+}
+
+label span input {
+  z-index: 999;
+  line-height: 0;
+  font-size: 50px;
+  position: absolute;
+  top: -2px;
+  left: -700px;
+  opacity: 0;
+  filter: alpha(opacity = 0);
+  -ms-filter: "alpha(opacity=0)";
+  cursor: pointer;
+  _cursor: hand;
+  margin: 0;
+  padding:0;
+}
+
+.hidden-message {
+  color: #0049ff;
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+.content p {
+  text-align: center;
+}
+
+.logo {
+  width: 200px;
+  height: inherit;
+}
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.controlPane {
+  justify-content: center;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.header {
+  justify-content: space-around;
+  flex-direction: row;
+  display: flex;
+  vertical-align: middle;
+  line-height: 150px;
+
+}
+
+.controlPaneItem {
+  margin-right: 30px;
+  padding: 12px 65px;
+}
+.regular {
+  color: #979797;
+}
+
+.regular:hover {
+  color: #ff7900;
+}
+
+.controlPaneItem p{
+  margin: 0;
+  font-size: 19px;
+}
+
+
+.active {
+  border: 1px solid #0049ff;
+  color: #0049ff;
+  border-radius: 50px;
+}
+
+.eventItem {
+  width: 240px;
+  height: 330px;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.eventItem:hover {
+  border: 1px solid #ff7900;
+}
+
+.content {
+  width: 240px;
+  height: 330px;
+  margin: 30px;
+}
+
+.eventInfo {
+  margin-top: 100px;
+  color: #0049ff;
+}
+
+.form-control {
+  display: inline;
+}
+
+.eventSlogo {
+  font-weight: 400;
+}
+
+.eventName {
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.orangeButton {
+  color: #ff7900;
+  background-color: white;
+  border: 1px solid #ff7900;
+  font-weight: 700;
+  margin-bottom: 5px;
+  border-radius: 50px;
+  width: 100px;
+  height: 30px;
+}
+
+.orangeButton:hover {
+  color: #0049ff;
+}
+
+.buttonWrapper {
+  box-sizing: border-box;
+}
+
+.timeStamp {
+  color:#919191;
+}
+
+.main {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.destinguishTitle {
+  font-size: 25px;
+  font-weight: 700;
+  color: #444444;
+  margin-left: 50px;
+}
+</style>
+
+<script>
+    jQuery(document).ready(function () {
+        jQuery(".main-table").clone(true).appendTo('#table-scroll').addClass('clone');
+    });
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+crossorigin="anonymous"></script>
+
+</head>
+
+<body class="bg_main">
+    <div id="root">
+    </div>
+    <script src="/static/bundle_main.js"></script>
+</body>
+
+</html>
